@@ -1,11 +1,15 @@
 numeros = []
-soma = 0
-quantidade = 0
-opcao = 1
-while(opcao !=0):
-    num = int(input('Digite um número: '))
+pares = []
+impares = []
+
+for i in range(20):
+    num = int(input(f'Digite o {i+1}° número:'))
     numeros.append(num)
-    soma = soma + num
-    quantidade = quantidade + 1
-    opcao = int(input('0 (sair) - 1 (novo número): '))
-print(f'Soma {soma} - Média: {soma/quantidade}')
+    if num % 2 == 0:
+        pares.append(num)
+    else:
+        impares.append(num)
+
+print("\nLista completa:", numeros)
+print("Números pares:", pares)  
+print("Números impares:", impares)     
