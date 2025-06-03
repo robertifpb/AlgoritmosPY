@@ -1,8 +1,8 @@
 import requests
 from pprint import pprint
 
-cep = int(input('Informe o cep que deseja consultar: '))
-url = f'https://viacep.com.br/ws/{cep}/json/'
+cnpj = int(input('Informe o CNPJ: '))
+url = f"https://publica.cnpj.ws/cnpj/{cnpj}"
 
 response = requests.get(url)
 
